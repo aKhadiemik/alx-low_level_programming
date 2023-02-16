@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - prints size of types for char, int, long int, long long int, float
  * Return: 0 if successful exit, non-zero if unsuccessful exit
  */
