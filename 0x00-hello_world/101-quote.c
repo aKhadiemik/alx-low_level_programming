@@ -4,7 +4,7 @@
 /**
  * main - prints [quot] and that piece of art is usefuli [quot]
  * - Dora Korpar, 2015-10-19 [quot] \n to STDERR.
- * Always returns 0
+ * Return: Always returns 0
  */
 
 int main(void)
