@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main: prints (using printf) the following
+ * main - prints (using printf) a statement
  * with proper grammar, but the outcome is a piece of art,
  * Return: 0 for successful exit, non-zero for unsuccessful exit
  */
