@@ -22,14 +22,14 @@ int main(void)
 			{
 				putchar((x / 10) + 48);
 				putchar((x % 10) + 48);
-				putchar(' ');
+				putchar(32);
 				putchar((y / 10) + 48);
 				putchar((y % 10) + 48);
 
 				if (x != 98 || y != 99)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(44);
+					putchar(32);
 				}
 			}
 		}
