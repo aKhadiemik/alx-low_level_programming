@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - putchar a-z then A-Z
+ * main - putchar a-z, A-Z
  * Return: If successful 0
  */
 
