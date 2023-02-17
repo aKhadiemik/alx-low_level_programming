@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 /**
- * main - generates random number and print it
- * and if it is positive, negative, or zero
+ * main - generates random number, prints whether +ve, -ve, zero
+ * n: random number
  * Return: 0
  */
 
