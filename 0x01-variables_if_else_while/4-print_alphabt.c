@@ -2,6 +2,7 @@
 
 /**
  * main - putchar a-z excludes q and e
+ * Limitations - putchar use, only twice
  * Return: If successful 0
  */
 
