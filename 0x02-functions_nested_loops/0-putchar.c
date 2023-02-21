@@ -2,7 +2,7 @@
 
 /**
  * main - prints _putchar + \n.
- * Limitation: No std libs used 
+ * Limitation: No std libs used
  * Return: Upon success 0
  */
 
