@@ -2,7 +2,7 @@
 
 /**
  * _islower - check whether lowercase
- * @c - accepts ASCII input
+ * @c: accepts ASCII input
  * Return: if lowercase 1, else 0
  */
 
