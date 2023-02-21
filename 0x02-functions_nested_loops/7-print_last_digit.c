@@ -2,7 +2,7 @@
 
 /**
  * print_last_digit - putchar last digit of provided int
- * @n integer
+ * @n: integer
  * Return: value of an integer's last digit
  */
 
