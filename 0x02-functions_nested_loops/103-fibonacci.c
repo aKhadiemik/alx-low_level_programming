@@ -1,29 +1,29 @@
 #include <stdio.h>
 
 /**
- * main - finds and prints the sum of the even-valued terms
- * followed by a new line
+ * main - prints sum of the even members in fibonacci series
+ * Limitation - greatest member not to exceed 4_000_000
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int i;
-	unsigned long int j, k, next, sum;
+	int n;
+	unsigned long int m, x, p, sum;
 
-	j = 1;
-	k = 2;
+	m = 1;
+	x = 2;
 	sum = 0;
 
-	for (i = 1; i <= 33; ++i)
+	for (n = 1; n <= 33; ++n)
 	{
-		if (j < 4000000 && (j % 2) == 0)
+		if (m < 4000000 && (m % 2) == 0)
 		{
-			sum = sum + j;
+			sum = sum + m;
 		}
-		next = j + k;
-		j = k;
-		k = next;
+		p = m + x;
+		m = x;
+		x = p;
 	}
 
 	printf("%lu\n", sum);
