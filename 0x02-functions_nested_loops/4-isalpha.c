@@ -2,8 +2,8 @@
 
 /**
  * _isalpha - is character a member of the alphabet
- * @c: takes in ASCII values 
- * Return: if member of the alphabet 1, else 0 
+ * @c: takes in ASCII values
+ * Return: if member of the alphabet 1, else 0
  */
 
 int _isalpha(int c)
