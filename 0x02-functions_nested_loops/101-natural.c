@@ -5,7 +5,7 @@
 /**
  * main - computes sum of all integers divisible by 3 or 5
  * Range of input integers 0 =< n < 1024
- * Return: Success 
+ * Return: Success
  */
 
 int main(void)
