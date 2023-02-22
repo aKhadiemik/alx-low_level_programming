@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/**
+ * main - prints first 50 fibonacci numbers, 1, 2,...
+ * Return: 0
+ */
 
 int main(void)
 {
@@ -8,7 +12,7 @@ int main(void)
 	j = 1;
 	k = 2;
 
-	printf("%lu, ", j);
+	printf("%lu", j);
 	for (i = 1; i < 50; i++)
 	{
 		printf(", %lu", k);
