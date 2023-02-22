@@ -7,17 +7,17 @@
 
 int main(void)
 {
-	unsigned long int i, j, k;
+	unsigned long int q, r, s;
 
-	j = 1;
-	k = 2;
+	r = 1;
+	s = 2;
 
-	printf("%lu", j);
-	for (i = 1; i < 50; i++)
+	printf("%lu", r);
+	for (q = 1; q < 50; q++)
 	{
-		printf(", %lu", k);
-		k = k + j;
-		j = k - j;
+		printf(", %lu", s);
+		s = s + r;
+		r = s - r;
 	}
 
 	printf("\n");
