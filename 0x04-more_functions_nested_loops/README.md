@@ -1,1 +1,3 @@
-# Functions & Loops
+# C Functions & Loops
+> Loops
+> Functions
