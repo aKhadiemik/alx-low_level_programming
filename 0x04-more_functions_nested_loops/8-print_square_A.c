@@ -6,17 +6,19 @@
 
 void print_square(int n)
 {
-	int i, j;
+	int i, square_area;
 
-	if (n < 1)
+	square_area = n * n;
+
+	if (n < 0)
 		_putchar('\n');
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < square_area; i++)
 	{
-		for (j = 0; j < n; j++)
+		_putchar('#');
+		if ((i + 1) % n == 0)
 		{
-			_putchar('#');
+			_putchar('\n');
 		}
-	_putchar('\n');
 	}
 }
