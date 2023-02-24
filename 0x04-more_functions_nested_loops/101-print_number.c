@@ -21,5 +21,5 @@ void print_number(int n)
 	if (k > 9)
 		print_number(k / 10);
 
-	_putchar((k % 10) + '0');
+	_putchar((k % 10) + 48);
 }
