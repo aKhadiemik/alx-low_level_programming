@@ -2,7 +2,8 @@
 #include <math.h>
 
 /**
- * main - computes largest prime factor of supplied no. 
+ * main - computes largest prime factor of
+ * 612852475143;
  * Return: 0
  */
 
