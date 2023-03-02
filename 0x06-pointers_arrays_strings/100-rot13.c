@@ -8,19 +8,17 @@
 char *rot13(char *s)
 {
 	char *str = s;
-	char c;
+	char base;
 	int offset;
 
-	while (*str)
+	while (*str != '\0')
 	{
-		c = *str;
-
-		offset = (c >= 'a') ? c - 'a' : (c >= 'A' && c <= 'Z') ? c - 'A' : -1;
-		if (offset >= 0)
+		if ((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z'))
 		{
-			*str = ((offset + 13) % 26) + ((c >= 'a') ? 'a' : 'A');
+			offset = (*str >= 'a') && (*str <= 'z');
+			base = 'a' * offset + 'A' * (1 - offset);
+			*str = ((*str - base + 13) % 26) + base;
 		}
-
 		str++;
 	}
 
