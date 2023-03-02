@@ -10,14 +10,14 @@
 char *leet(char *str)
 {
 	int i, j;
-	char leet_map[] = {'4', '3', '\0', '0', '7', '1'};
-	char leet_letters[] = {'a', 'e', 'o', 't', 'l'};
+	char leet_map[5] = {'4', '3', '0', '7', '1'};
+	char leet_letters[5][3] = {{"Aa"}, {"Ee"}, {"Oo"}, {"Tt"}, {"Ll"}};
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (j = 0; j < 5; j++)
 		{
-			if (str[i] == leet_letters[j] || str[i] == leet_letters[j] - 32)
+			if (str[i] == leet_letters[j][0] || str[i] == leet_letters[j][1])
 			{
 				str[i] = leet_map[j];
 				break;
