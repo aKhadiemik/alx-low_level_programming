@@ -6,7 +6,7 @@
 #define UPPERCASE_END 'Z'
 #define DIGIT_START '0'
 #define DIGIT_END '9'
-#define WORD_DELIMITERS ",;.!?(){}\n\t\" "
+#define WORD_DELIMS ",;.!?(){}\n\t\" "
 
 /**
  * cap_string - capitalize all words of a string
@@ -16,7 +16,7 @@
 
 char *cap_string(char *str)
 {
-	int index, word_start_index;
+	int index, wd_start_idx;
 	int is_word_start = 1;
 	char c;
 
@@ -36,9 +36,9 @@ char *cap_string(char *str)
 		}
 		else
 		{
-			for (word_start_index = 0; WORD_DELIMITERS[word_start_index] != '\0'; word_start_index++)
+			for (wd_start_idx = 0; WORD_DELIMS[wd_start_idx] != '\0'; wd_start_idx++)
 			{
-				if (c == WORD_DELIMITERS[word_start_index])
+				if (c == WORD_DELIMS[wd_start_idx])
 				{
 					is_word_start = 1;
 					break;
@@ -47,6 +47,6 @@ char *cap_string(char *str)
 		}
 
 	}
-	
+
 	return (str);
 }
