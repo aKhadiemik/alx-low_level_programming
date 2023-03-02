@@ -9,28 +9,37 @@
 
 char *rot13(char *s)
 {
-	char *p = s;
-	char c;
-	int index;
+	char *str = s;
+	char c, base;
+	int offset;
 
-	while (*p != '\0')
+	while (*str != '\0')
 	{
-		c = *p;
+		c = *str;
 
-		if (c >= 'a' && c <= 'z')
+		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		{
-			index = c - 'a';
-			*p = (index + 13) % 26 + 'a';
-		}
-		else if (c >= 'A' && c <= 'Z')
-		{
-			index = c - 'A';
-			*p = (index + 13) % 26 + 'A';
+			if (c >= 'a')
+			{
+				base = 'a';
+			}
+			else
+			{
+				base = 'A';
+			}
+
+			offset = c - base;
+			if (offset < 13)
+			{
+				*str = base + offset + 13;
+			}
+			else
+			{
+				*str = base + offset - 13;
+			}
 		}
 
-		p++;
+		str++;
 	}
-
 	return (s);
 }
-
