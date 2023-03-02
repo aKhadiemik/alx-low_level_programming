@@ -11,7 +11,7 @@ char *leet(char *str)
 {
 	int i, j;
 	char leet_map[5] = {'4', '3', '0', '7', '1'};
-	char leet_letters[5][3] = {{"Aa"}, {"Ee"}, {"Oo"}, {"Tt"}, {"Ll"}};
+	char leet_letters[5][2] = {{"Aa"}, {"Ee"}, {"Oo"}, {"Tt"}, {"Ll"}};
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
