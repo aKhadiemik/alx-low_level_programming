@@ -16,7 +16,7 @@
 
 char *cap_string(char *str)
 {
-	int i, index;
+	int index, word_start_index;
 	int is_word_start = 1;
 	char c;
 
@@ -34,12 +34,19 @@ char *cap_string(char *str)
 		{
 			is_word_start = 0;
 		}
-		else if (strchr(WORD_DELIMITERS, c) != NULL)
+		else
 		{
-			is_word_start = 1;
+			for (word_start_index = 0; WORD_DELIMITERS[word_start_index] != '\0'; word_start_index++)
+			{
+				if (c == WORD_DELIMITERS[word_start_index])
+				{
+					is_word_start = 1;
+					break;
+				}
+			}
 		}
-	}
 
+	}
+	
 	return (str);
 }
-
