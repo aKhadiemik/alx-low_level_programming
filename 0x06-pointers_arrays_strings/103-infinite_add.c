@@ -14,7 +14,7 @@
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 
-	int carry, len1, len2, carry, i, sum;
+	int carry, len1, len2, i, j, k, sum;
 
 	carry = 0, len1 = strlen(n1), len2 = strlen(n2);
 
