@@ -12,6 +12,9 @@
 
 char *_strchr(char *s, char c)
 {
+	if (s == (void *) 0)
+		return ((void *) 0);
+
 	while (*s != '\0')
 	{
 		if (*s == c)
@@ -20,5 +23,5 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	return ((char *) s);
+	return ((void *) 0);
 }
