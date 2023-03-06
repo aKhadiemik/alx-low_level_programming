@@ -23,5 +23,5 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	return ((void *) 0);
+	return ((*s == c) ? (char *)s : (void *) 0);
 }
