@@ -23,5 +23,8 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	return ((*s == c) ? (char *)s : (void *) 0);
+	if (*s == c)
+		return ((char *)s);
+	else
+		return ((void *) 0);
 }
