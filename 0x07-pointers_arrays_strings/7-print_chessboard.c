@@ -7,7 +7,7 @@
 
 void print_chessboard(char (*a)[8])
 {
-	if (a == NULL)
+	if (a == ((void *) 0))
 	{
 		return (-1);
 	}
