@@ -1,6 +1,6 @@
-#include "mainh"
+#include "main.h"
 
-/*
+/**
  * print_diagsums - prints sum of 2 diags of square matrix
  * @a: matrix
  * @size: size of matrix
@@ -8,12 +8,10 @@
 
 void print_diagsums(int *a, int size)
 {
-	/*
-	 * if (matrix == ((void *) 0))
+	if (matrix == ((void *) 0))
 	{
-		return (-1);
+		return;
 	}
-	*/
 
 	int i, j, diagonal1_sum = 0, diagonal2_sum = 0;
 
@@ -23,11 +21,11 @@ void print_diagsums(int *a, int size)
 		{
 			if (i == j)
 			{
-				diagonal1_sum += *(matrix + i * size + j);
+				diagonal1_sum += *(matrix + (i * size) + j);
 			}
 			if (i + j == size - 1)
 			{
-				diagonal2_sum += *(matrix + i * size + j);
+				diagonal2_sum += *(matrix + (i * size) + j);
 			}
 		}
 	}
