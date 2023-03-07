@@ -10,7 +10,7 @@ void print_diagsums(int *a, int size)
 {
 	if (matrix == ((void *) 0))
 	{
-		return;
+		return (-1);
 	}
 
 	int i, j, diagonal1_sum = 0, diagonal2_sum = 0;
