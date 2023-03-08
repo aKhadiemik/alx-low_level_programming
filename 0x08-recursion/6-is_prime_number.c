@@ -2,24 +2,29 @@
 
 
 /**
- * square_root - returns sq rt of the input
+ * is_prime_helper - checks if n is divisible by integers
+ * in range 2 to sq rt of n
  * @n: integer
+ * @i: integer
  *
  * Return: root of n
  */
 
-int square_root(int n)
+int is_prime_helper(int n, int i)
 {
-	int x, y;
-
-	x = n;
-	y = 1;
-	while (x > y)
+	if (n <= 2)
 	{
-		x = (x + y) / 2;
-		y = n / x;
+		return (n == 2);
 	}
-	return (x);
+	if (i * i > n)
+	{
+		return (1);
+	}
+	if (n % i == 0)
+	{
+		return (0);
+	}
+	return (is_prime_helper(n, i + 1));
 }
 
 /**
@@ -32,19 +37,5 @@ int square_root(int n)
 
 int is_prime_number(int n)
 {
-	int i;
-
-	if (n == 1)
-	{
-		return (0);
-	}
-
-	for (i = 2; i <= square_root(n); i++)
-	{
-		if (n % i == 0)
-		{
-			return (0);
-		}
-	}
-	return (1);
+	is_prime_helper(n, 2);
 }
