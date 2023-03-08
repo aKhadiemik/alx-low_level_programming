@@ -8,6 +8,20 @@
  * Return: 1 if prime, 0 if not
  */
 
+int square_root(n)
+{
+	int x, y;
+
+	x = n;
+	y = 1;
+	while (x > y)
+	{
+		x = () / 2;
+		y = n / x;
+	}
+	return (x);
+}
+
 int is_prime_number(int n)
 {
 	int i;
@@ -17,7 +31,7 @@ int is_prime_number(int n)
 		return (0);
 	}
 
-	for (i = 2; i <= sqrt(n); i++)
+	for (i = 2; i <= square_root(n); i++)
 	{
 		if (n % i == 0)
 		{
