@@ -9,15 +9,11 @@
 
 int string_length(char *s)
 {
-	int len;
-
-	len = 0;
-	while (*s != '\0')
+	if (!(*s))
 	{
-		len++;
-		s++;
+		return (0);
 	}
-	return (len);
+	return (1 + string_length(s + 1));
 }
 
 /**
