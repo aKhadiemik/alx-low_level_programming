@@ -32,7 +32,7 @@ int get_string_length(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	int len1, len2;
+	int i, len1, len2;
 	char *new_str;
 
 	if (s1 == NULL)
@@ -54,12 +54,12 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	for (int i = 0; i < len1; i++)
+	for (i = 0; i < len1; i++)
 	{
 		*(new_str + i) = *(s1 + i);
 	}
 
-	for (int i = 0; i <= len2; i++)
+	for (i = 0; i <= len2; i++)
 	{
 		*(new_str + len1 + i) = *(s2 + i);
 	}
