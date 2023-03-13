@@ -13,6 +13,7 @@
 char *_strdup(char *str)
 {
 	int i, len;
+	char *new_str;
 
 	if (str == ((void *) 0))
 	{
@@ -25,7 +26,7 @@ char *_strdup(char *str)
 		len++;
 	}
 
-	char *new_str = (char *) malloc((len + 1) * sizeof(char));
+	new_str = (char *) malloc((len + 1) * sizeof(char));
 
 	if (new_str == ((void *) 0))
 	{
