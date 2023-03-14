@@ -18,22 +18,19 @@ int count_words(char *str)
 	{
 		if (*(str + i) == ' ')
 		{
-			if (in_word)
-			{
-				in_word = 0;
-			}
 			i++;
+			in_word++;
 			continue;
 		}
-		if (!in_word)
-		{
-			in_word = 1;
-			count++;
-		}
+		count++;
 		while (*(str + i) != ' ' && *(str + i) != '\0')
 		{
 			i++;
 		}
+	}
+	if (in_word == i)
+	{
+		return (0);
 	}
 	return (count);
 }
