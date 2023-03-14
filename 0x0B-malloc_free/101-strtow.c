@@ -12,25 +12,23 @@ char **strtow(char *str);
 
 int count_words(char *str)
 {
-	int count = 0, i = 0, in_word = 0;
+	int count = 0, i = 0;
 
 	while (*(str + i) != '\0')
 	{
-		if (*(str + i) == ' ')
+		while (*(str + i) == ' ')
 		{
 			i++;
-			in_word++;
-			continue;
+		}
+		if (*(str + i) == '\0')
+		{
+			break;
 		}
 		count++;
 		while (*(str + i) != ' ' && *(str + i) != '\0')
 		{
 			i++;
 		}
-	}
-	if (in_word == i)
-	{
-		return (0);
 	}
 	return (count);
 }
