@@ -1,3 +1,6 @@
+#include "main.h"
+#include <stdlib.h>
+
 /**
  * argstostr - concatenates all the arguments of the program
  * final string arranges each argument followed by a newline character
