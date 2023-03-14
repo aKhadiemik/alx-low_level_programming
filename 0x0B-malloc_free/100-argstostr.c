@@ -43,7 +43,7 @@ static int total_length(char **arr, int rows, int cols)
 
 static char *copy_strings(char **arr, int rows, int cols, int length)
 {
-	int i, j;
+	int i, j, index;
 	char *new_str;
 
 	new_str = (char *) malloc(length * sizeof(char));
@@ -51,11 +51,11 @@ static char *copy_strings(char **arr, int rows, int cols, int length)
 	{
 		return (NULL);
 	}
-	int index = 0;
+	index = 0;
 
-	for (int i = 0; i < rows; i++)
+	for (i = 0; i < rows; i++)
 	{
-		for (int j = 0; j < cols; j++)
+		for (j = 0; j < cols; j++)
 		{
 			new_str[index++] = arr[i][j];
 			if (arr[i][j] == '\0')
