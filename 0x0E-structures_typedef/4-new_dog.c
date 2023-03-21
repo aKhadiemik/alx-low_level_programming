@@ -27,7 +27,7 @@ int _strlen(char *s)
  * Return: dest
  */
 
-char *_strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
 	char *dest_ptr = dest;
 
@@ -63,9 +63,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return ((!new_dog->owner)
 			? (free(new_dog->name), free(new_dog), NULL)
 			: new_dog);
-	new_dog->owner = _stcpy(new_dog->owner, owner);
+	new_dog->owner = _strcpy(new_dog->owner, owner);
 
-	new_dog->oage = age;
+	new_dog->age = age;
 
 	return (new_dog);
 }
