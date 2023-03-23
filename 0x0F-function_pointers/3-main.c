@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
 	op_chosen_action = get_op_func(argv[2]);
 
-	if (op_chosen_action == NULL)
+	if (!op_chosen_action)
 	{
 		printf("Error\n");
 		exit(99);
