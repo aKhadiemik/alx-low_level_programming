@@ -15,15 +15,10 @@ void print_all(const char * const format, ...)
 	int format_index = 0;
 	va_list args;
 
-	if (format == NULL)
-		return;
-	
 	va_start(args, format);
 
 	while (format && format[format_index])
 	{
-		if (format_index > 0)
-			separator = ", ";
 
 		switch (format[format_index])
 		{
@@ -43,9 +38,10 @@ void print_all(const char * const format, ...)
 				printf("%s%s", separator, s);
 				break;
 			default:
-				format_index++;
-				continue;
+				break;
 		}
+		if (format_index > 0)
+			separator = ", ";
 		format_index++;
 	}
 	printf("\n"), va_end(args);
