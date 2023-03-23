@@ -10,7 +10,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	char *separator = "";
+	const char *separator = "";
 	char *s;
 	int format_index = 0;
 	va_list args;
@@ -19,8 +19,8 @@ void print_all(const char * const format, ...)
 
 	while (format && format[format_index])
 	{
-		if (format_index > 0)
-			separator = ", ";
+		/*if (format_index > 0)*/
+			/*separator = ", ";*/
 
 		switch (format[format_index])
 		{
@@ -42,6 +42,7 @@ void print_all(const char * const format, ...)
 			default:
 				break;
 		}
+		separator = ", ";
 		format_index++;
 	}
 	printf("\n"), va_end(args);
