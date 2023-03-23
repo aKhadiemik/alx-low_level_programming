@@ -6,7 +6,7 @@
 #include <string.h>
 
 /**
- * struct_op - Struct op
+ * struct op - Struct op
  * @op: The operator
  * @f: The function to be associated
  */
