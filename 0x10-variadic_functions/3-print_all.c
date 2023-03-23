@@ -10,14 +10,14 @@
  */
 void print_all(const char * const format, ...)
 {
-	const char *separator = "";
+	char *separator = "";
 	char *s;
 	int format_index = 0;
 	va_list args;
 
 	va_start(args, format);
 
-	while (format[format_index])
+	while (format && format[format_index])
 	{
 		if (format_index > 0)
 			separator = ", ";
