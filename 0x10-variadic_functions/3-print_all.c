@@ -19,7 +19,6 @@ void print_all(const char * const format, ...)
 
 	while (format && format[format_index])
 	{
-
 		switch (format[format_index])
 		{
 			case 'c':
