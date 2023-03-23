@@ -38,10 +38,10 @@ void print_all(const char * const format, ...)
 				printf("%s%s", separator, s);
 				break;
 			default:
-				break;
+				format_index++;
+				continue;
 		}
-		if (format_index > 0)
-			separator = ", ";
+		separator = ", ";
 		format_index++;
 	}
 	printf("\n"), va_end(args);
