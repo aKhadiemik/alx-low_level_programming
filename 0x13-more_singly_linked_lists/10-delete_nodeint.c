@@ -13,18 +13,18 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *tmp, *swap;
 	unsigned int i;
 
-	if (head == NULL)
-	return (-1);
+	if (head == NULL || *head == NULL)
+		return (-1);
 
 	if (index == 0)
 	{
-		swap = *head
-		* head = (*head)->next;
+		swap = *head;
+		*head = (*head)->next;
 		free(swap);
 		return (1);
 	}
 
-	swap = *head
+	swap = *head;
 	for (i = 0; i < (index - 1); i++)
 	{
 		if (swap->next == NULL)
@@ -38,4 +38,3 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	free(tmp);
 	return (1);
 }
-
