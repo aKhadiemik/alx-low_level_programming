@@ -67,5 +67,6 @@ int main(int argc, char *argv[])
 			header->e_entry);
 	printf("  Number of program headers:		%d\n", header->e_phnum);
 	printf("  Size of section headers:			 %d (bytes)\n", header->e_shentsize);
+
 	return (0);
 }
