@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * create_node: creates new node on linked list
+ * create_node - creates new node on linked list
  *
  * @n: node data
  *
