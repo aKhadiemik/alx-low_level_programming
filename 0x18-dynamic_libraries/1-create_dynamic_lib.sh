@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 c_files=$(find . -maxdepth 1 -type f -name "*.c")
 
