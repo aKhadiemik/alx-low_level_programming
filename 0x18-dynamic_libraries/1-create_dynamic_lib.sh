@@ -9,3 +9,4 @@ done
 gcc -shared -o liball.so *.o
 
 rm -f *.o
+
