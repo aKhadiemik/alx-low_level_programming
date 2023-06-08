@@ -12,7 +12,7 @@ unsigned long hash_djb2(const unsigned char *str)
 {
 	unsigned long hash = 5381;
 
-	if(str == NULL)
+	if (str == NULL)
 		return (0);
 
 	while (*str)
